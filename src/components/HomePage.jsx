@@ -15,6 +15,9 @@ import {
     CardHeader,
   } from "@material-tailwind/react";
 
+const urlBack = 'https://backghtucuman.netlify.app/.netlify/functions/server/participants'
+// const url = 'http://localhost:8080/participants'
+
 export function ParticipantCard({ photo, name, lastName, id, facebook, instagram, tiktok }) {
 
     return (
@@ -72,7 +75,7 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        getParticipants();
+        getParticipants(urlBack);
     }, []);
 
     useEffect(() => {

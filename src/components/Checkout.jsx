@@ -29,7 +29,7 @@ const Checkout = ({ onClick }) => {
 
   const getParticipant = async ( id ) => {
         try {
-            const response = await axios.get(`http://localhost:8080/participants?id=${id}`);
+            const response = await axios.get(`https://backghtucuman.netlify.app/.netlify/functions/server/participants?id=${id}`);
             setData(response.data.participant);
             window.localStorage.setItem('participant', JSON.stringify(response.data.participant))
         } catch (error) {
