@@ -24,7 +24,7 @@ const App = () => {
   
   const handleClick = () => {
     setIsLoading(true);
-    fetch("http://localhost:8080/create_preference", {
+    fetch("https://backghtucuman.netlify.app/.netlify/functions/server/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
