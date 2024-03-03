@@ -16,7 +16,7 @@ import Success from "./components/Success";
 import Results from "./components/Results";
 
 // REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
-initMercadoPago("TEST-d6c1b91f-14ff-4527-8596-577d7f3f98b3");
+initMercadoPago("APP_USR-93d7d17a-4057-4df1-99eb-a69a505ace99");
 
 const App = () => {
   const [preferenceId, setPreferenceId] = useState(null);
