@@ -24,24 +24,24 @@ const App = () => {
   
   const handleClick = () => {
     setIsLoading(true);
-    fetch("https://backghtucuman.netlify.app/.netlify/functions/server/create_preference", {
-      method: "POST",
+  
+    axios.post("https://backghtucuman.netlify.app/.netlify/functions/server/create_preference", orderData, {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(orderData),
     })
       .then((response) => {
-        return response.json();
+        return response.data;
       })
       .then((preference) => {
         setPreferenceId(preference.id);
       })
       .catch((error) => {
         console.error(error);
-      }).finally(() => {
-        setIsLoading(false);
       })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const renderSpinner = () => {
