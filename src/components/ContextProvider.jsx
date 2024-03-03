@@ -6,7 +6,7 @@ const InternalProvider = ({ children, context }) => {
     const [data, setData] = useState([]);
 
     // Función para realizar una solicitud Axios
-    const getParticipants = async (url = "http://localhost:8080/participants") => {
+    const getParticipants = async (url = "https://backghtucuman.netlify.app/.netlify/functions/server/participants") => {
         try {
             const response = await axios.get(url);
             setData(response.data);

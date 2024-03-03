@@ -17,7 +17,7 @@ import {
 const Results = () => {
     const [data, setData] = useState([]);
 
-    const getParticipants = async (url = "http://localhost:8080/participants") => {
+    const getParticipants = async (url = "https://backghtucuman.netlify.app/.netlify/functions/server/participants") => {
         try {
             const response = await axios.get(url);
             // Ordenar los participantes por quantity_votes de manera descendente

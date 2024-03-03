@@ -65,7 +65,7 @@ const HomePage = () => {
     //const { getParticipants, data } = useContext(Context);
     const [data, setData] = useState([]);
 
-    const getParticipants = async (url = "http://localhost:8080/participants") => {
+    const getParticipants = async (url = "https://backghtucuman.netlify.app/.netlify/functions/server/participants") => {
         try {
             const response = await axios.get(url);
             setData(response.data);
