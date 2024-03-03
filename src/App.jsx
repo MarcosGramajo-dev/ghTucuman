@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage";
 import ErrorPage from "./components/Error";
 import { SpinnerCircular } from 'spinners-react';
 import background from '../img/background.jpg'
+import axios from 'axios'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Success from "./components/Success";
