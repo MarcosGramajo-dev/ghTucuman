@@ -9,7 +9,7 @@ const Success = () => {
     const [resData, setResData] = useState('')
     const getResponse = async (  ) => {
         try {
-            const response = await axios.get(`hhttps://backghtucuman.netlify.app/.netlify/functions/server/feedback?status=approved&participant_id=${orderData.id}&quantity_votes=${orderData.quantity}`);
+            const response = await axios.get(`https://backghtucuman.netlify.app/.netlify/functions/server/feedback?status=approved&participant_id=${orderData.id}&quantity_votes=${orderData.quantity}`);
             setResData(response.data)
         } catch (error) {
             console.error('Error fetching data:', error);
