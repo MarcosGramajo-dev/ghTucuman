@@ -15,11 +15,11 @@ const Success = () => {
 
   const urlParams = new URLSearchParams(queryString);
   const payment_id = urlParams.get('payment_id');
-
+  const merchant_order_id = urlParams.get('merchant_order_id')
 
   const getResponse = async (  ) => {
       try {
-          const response = await axios.get(`https://backghtucuman.netlify.app/.netlify/functions/server/feedback?status=approved&participant_id=${participant.id}&quantity_votes=${orderData.quantity}&payment_id=${payment_id}`);
+          const response = await axios.get(`https://backghtucuman.netlify.app/.netlify/functions/server/feedback?status=approved&participant_id=${participant.id}&quantity_votes=${orderData.quantity}&payment_id=${payment_id}&merchant_order_id=${merchant_order_id}`);
           setResData(response.data)
       } catch (error) {
           console.error('Error fetching data:', error);
