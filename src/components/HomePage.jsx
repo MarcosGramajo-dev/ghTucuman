@@ -22,7 +22,7 @@ export function ParticipantCard({ photo, name, lastName, id, facebook, instagram
 
     return (
       <Card
-        shadow={false}
+        shadow={true}
         className="relative grid w-[200px] h-[250px] items-end justify-center overflow-hidden text-center"
       >
         
@@ -34,7 +34,7 @@ export function ParticipantCard({ photo, name, lastName, id, facebook, instagram
             </div>
             <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
             </CardHeader>
-            <CardBody className="relative p-0 py-2 w-full">
+            <CardBody className="relative p-0 mb-2 py-2 w-full">
             <Typography
                 variant="h5"
                 color="white"
@@ -43,16 +43,15 @@ export function ParticipantCard({ photo, name, lastName, id, facebook, instagram
                 {name + ' ' + lastName}
             </Typography>
 
-            <div className="flex z-10 justify-center gap-2" >
+            <div className="flex z-10 justify-center gap-2  my-2" >
                 {facebook && <a className="z-10" href={facebook} target="_blank"><img src={face}/></a> }
                 {instagram && <a href={instagram} target="_blank"><img src={insta}/></a> }
                 {tiktok && <a href={tiktok} target="_blank"><img src={tik}/></a> }
             </div >
 
-            <Link to={`/checkout/${id}`} className="" >
-                <button className="text-black bg-white w-[140px] my-2 rounded-full">
-                    ¡Votalo!
-                </button>
+            
+            <Link to={`/checkout/${id}`} className="bg-white text-[#0f0d25] px-3 py-1 rounded-full focus:bg-[#0f0d257c]">
+              <span> ¡Votalo! </span>
             </Link>
 
             </CardBody>

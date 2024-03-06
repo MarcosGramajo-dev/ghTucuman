@@ -58,7 +58,7 @@ const App = () => {
   return (
     <InternalProvider context={{ preferenceId, isLoading, orderData, setOrderData }}>
       <Router>
-        <img src={background} alt="background" className="absolute z-[-1] h-full md:w-full bg-center"/>
+        <img src={background} alt="background" className="absolute z-[-1] min-h-full md:w-full bg-center"/>
         <Navbar />
         {renderSpinner()}
         <Routes>
@@ -69,7 +69,7 @@ const App = () => {
           <Route path="/feedback" element={<Success/>}/>
           <Route path="/results" element={<Results/>}/>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </InternalProvider>
   );

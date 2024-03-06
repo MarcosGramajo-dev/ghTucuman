@@ -12,7 +12,7 @@ const Checkout = ({ onClick }) => {
 
   const [isVisible, setIsVisible] = React.useState(true);
   const { preferenceId, isLoading: disabled, orderData, setOrderData } = React.useContext(Context);
-  const shoppingCartClass = classnames('shopping-cart dark mb-10', {
+  const shoppingCartClass = classnames('shopping-cart dark', {
     'shopping-cart--hidden': !isVisible,
   })
   const [data, setData] = useState([]);
@@ -51,11 +51,11 @@ const Checkout = ({ onClick }) => {
     <section className={shoppingCartClass}>
       <div className="container" id="container">
         <div className="block-heading">
-          <h1 className="text-3xl">¡Vota Ya!</h1>
+        <h1 className="text-3xl shadow-sm text-white p-4">¡Vota Ya!</h1>
         </div>
-        <div>
-          <div className="bg-white">
-            <div className="">
+        <div className="w-full flex justify-center">
+          <div className="bg-white max-w-md">
+            <div className="flex justify-center">
               <img
                 //className="img-fluid mx-auto d-block image"
                 className="p-5"
@@ -88,9 +88,9 @@ const Checkout = ({ onClick }) => {
             </div>
           </div>
         </div>
-        <div className="content">
-          <div className="row">
-            <div className="col-md-12 col-lg-4">
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-md flex justify-center">
+            <div className="bg-white w-full">
               <div className="summary">
                 <div className="summary-item">
                   <span className="text">Subtotal</span>
