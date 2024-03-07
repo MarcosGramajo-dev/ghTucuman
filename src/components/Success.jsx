@@ -38,7 +38,7 @@ const Success = () => {
       <div className="w-full flex justify-center items-center h-screen ">
         <div className="w-full max-w-md bg-white text-center py-3 shadow-2xl rounded-sm flex-col justify-center items-center">
           <h1 className="text-3xl">Tu voto fue aprobado</h1>
-          <h5 className="text-xl">5 Votos añadidos a</h5>
+          <h5 className="text-xl">${participant.quantity_votes} Votos añadidos a</h5>
           <div className="w-full flex justify-center">
             <img className="py-2 max-h-[300px]" src={participant.photo} alt="logo"/>
           </div>
